@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 1000;
+  text-align: center;
+  background-color:#fafafa;
+  padding:10px;
+}
+  a {
+  padding: 7px;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration:none;
+  color:#330000;
+  transition: color 1s ease;
+}
+a:hover {
+  color:#ff0040;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f;
+  animation: neon-glow 1s ease-in-out infinite alternate;
+}
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #ff0040, 0 0 4px #ff0040, 0 0 5px #ff0040, 0 0 6px #ff0040, 0 0 7px #ff0040;
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff0040, 0 0 5px #ff0040, 0 0 6px #ff0040, 0 0 7px #ff0040, 0 0 8px #ff0040;
+  }
+}
+a::after {
+  color:red;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  width: 0;
+  height: 2px;
+  background-color: darkgray;
+  transition: width 0.1s, left 0.1s;
+  transform: translateX(-0%);
+}
+
+a:hover::after {
+  left: 0;
+  width: 100%;
+}
+</style>
+<title>landing page</title>
+</head>
+<body>
+<div class="top">
+  <p><b>select tutorial</b></p>
+  <a href="https://tipply.pl/@neo_dev">donate me</a> <a href="basics.html">basics</a> <a href="basicss.html">basic css</a>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>WELCOME TO MY HTML TUTORIALS PAGE</h1>
+  <p>thsre will be a lot of tutorials here and maybe someday free page servers</p>
+  <br>
+  <br>
+  <h3>FAQ</h3>
+  <p>q: why did you do this page?</p>
+  <p>a: because whenever i am making pages in school, everyone wants me to teach them, so I think they are interested and made this page</p>
+  <br>
+  <p>q: how do you get the money for this</p>
+  <p>a: I am using github&#39s free page servers to upload my pages. But if you want to support me you can donate in the top bar</p>
+  <br>
+  <p>q: aren&#39t there other tutorial pages?</p>
+  <p>a: yes, but mine is supposed to be easy to understand even by kids</p>
+  <br>
+  <p>q: will you teach other programing languages</p>
+  <p>a: html is not a programing language, but I think Imma make tutorials for c# or smth</p>
+  <br>
+  <p>q: how advanced will be this tutorial</p>
+  <p>a: enough to make a semi-good page</p>
+  <br>
+  <p>q: will you teach how to upload the page on web</p>
+  <p>a: i have that in plans</p>
+</body>
+</html>

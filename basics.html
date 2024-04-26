@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 1000;
+  text-align: center;
+  background-color:#fafafa;
+  padding:10px;
+}
+  a {
+  padding: 7px;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration:none;
+  color:#330000;
+  transition: color 1s ease;
+}
+a:hover {
+  color:#ff0040;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f;
+  animation: neon-glow 1s ease-in-out infinite alternate;
+}
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #ff0040, 0 0 4px #ff0040, 0 0 5px #ff0040, 0 0 6px #ff0040, 0 0 7px #ff0040;
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff0040, 0 0 5px #ff0040, 0 0 6px #ff0040, 0 0 7px #ff0040, 0 0 8px #ff0040;
+  }
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  width: 0;
+  height: 2px; 
+  background-color: darkgray;
+  transition: width 0.1s, left 0.1s;
+  transform: translateX(-0%);
+}
+
+a:hover::after {
+  left: 0;
+  width: 100%;
+}
+  .command{
+    border: 2px solid cyan;
+</style>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Basics of HTML</title>
+</head>
+<body>
+  <div class="top">
+  <p><b>select tutorial</b></p>
+  <a href="https://tipply.pl/@neo_dev">donate me</a> <a href="basics.html">basics</a> <a href="basicss.html">basic css</a>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <h1>
+    HTML basics
+  </h1>
+  <p>let&#39s quickly explain what html is first.</p>
+  <h5>html is a skeleton of a webpage,which means it looks bad but it makes the page work. It works with languages like javascript and css. Javascript makes the page reactive like refreshing only one part of the page etc. and css makes styles for the page like the bar with the tutorials has a darker background + the hover animation and the commands have the cyan outline around them. This is going to be basics of HTML like adding text and images</h9>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="command">
+    <h5>making the skeleton for the skeleton</h5>
+    <p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&nbsp;&nbsp;&lt;meta http-equiv=&quot;CONTENT-TYPE&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</p>
+<p>&nbsp;&nbsp;&lt;title&gt;Hello, World!&lt;/title&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&nbsp;&nbsp;&lt;h1&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Hello, World!</p>
+<p>&nbsp;&nbsp;&lt;/h1&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+    <h5>put this in every code or it won&#39t work</h5>
+  </div>
+  <br>
+  <div class="command">
+    <h5>adding big text</h5>
+    <p>&lth1&gttext in here&lt/h1&gt</p>
+    <h5>this would look like this</h5>
+    <h1>text in here</h1>
+  </div>
+  <br>
+  <div class="command">
+    <h5>adding normal text</h5>
+    <p>&ltp&gttext in here&lt/p&gt</p>
+    <h5>this would look like this</h5>
+    <p>text in here</p>
+  </div>
+  <br>
+  <div class="command">
+    <h5>adding images</h5>
+    <p>&ltimg src=&quotPATH/TO/IMAGE.jpg&quot&gt</p>
+    <p>example</p>
+    <p>&ltimg src=&quotimages/image.png&quot&gt</p>
+    <h5>this would look like this</h5>
+    <img src="images/image.png">
+  </div>
+</body>
+</html>
