@@ -2,6 +2,21 @@
 <html>
 <head>
 <style>
+  #container {
+  position: relative;
+  width: 100vw;
+  height: 100px;
+  border: 0px solid black;
+  overflow: hidden;
+}
+
+#gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
 .top {
   position: fixed;
   top: 0;
@@ -85,5 +100,27 @@ a:hover::after {
   <br>
   <p>q: will you teach how to upload the page on web</p>
   <p>a: i have that in plans</p>
+  <div id="container">
+  <img id="gif" src="cat.gif" alt="Moving cat">
+</div>
 </body>
+<script>
+const container = document.getElementById('container');
+const gif = document.getElementById('gif');
+const containerWidth = container.clientWidth;
+const gifWidth = gif.clientWidth;
+let positionX = 0;
+let direction = 1; 
+
+function moveGif() {
+  positionX += 5 * direction;
+  if (positionX + gifWidth >= containerWidth || positionX <= 0) {
+    direction *= -1;
+    gif.style.transform = `scaleX(${direction})`; 
+  }
+  gif.style.left = positionX + 'px';
+}
+
+setInterval(moveGif, 100);
+</script>
 </html>
